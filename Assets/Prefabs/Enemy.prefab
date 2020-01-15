@@ -93,10 +93,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bcec8478d68dd44a7f6b5a7196cf2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveTime: 0.5
-  BlockingLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  Player: {fileID: 0}
+  MoveTime: 10
+  BurstSpread: 10
+  BurstAmount: 15
+  TimeBetweenMoves: 1
   RoffSet: 90
+  ShootCooldown: 0.5
+  Player: {fileID: 0}
   Bullet: {fileID: 5079454973272805986, guid: a7a3980f9de5e814f963c5d3d36662a9, type: 3}
+  ShootingPoint: {fileID: 0}

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -6935594100253484213}
   - component: {fileID: -6720038474201510939}
   - component: {fileID: -4316406290840707883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

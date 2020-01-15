@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (!other.transform.CompareTag("Enemy")) {
+        if (!other.transform.CompareTag("Enemy")    ) {
             _explosionToDestroy = Explosion;
             Instantiate(_explosionToDestroy, other.GetContact(0).point, Quaternion.identity);
             Destroy(gameObject);
