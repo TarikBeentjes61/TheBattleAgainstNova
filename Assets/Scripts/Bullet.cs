@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     public Rigidbody2D rb;
@@ -18,7 +16,7 @@ public class Bullet : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (!other.transform.CompareTag("Enemy")) {
+        if (!other.transform.CompareTag("Enemy")    ) {
             _explosionToDestroy = Explosion;
             Instantiate(_explosionToDestroy, other.GetContact(0).point, Quaternion.identity);
             Destroy(gameObject);
