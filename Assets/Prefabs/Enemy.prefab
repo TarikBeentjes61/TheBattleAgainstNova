@@ -93,10 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bcec8478d68dd44a7f6b5a7196cf2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveTime: 10
+  MoveTime: 1
+  DistanceToKeep: 3
   BurstSpread: 10
   BurstAmount: 15
-  TimeBetweenMoves: 1
+  TimeBetweenMoves: 3
   RoffSet: 90
   ShootCooldown: 0.5
   Player: {fileID: 0}
