@@ -221,7 +221,7 @@ PrefabInstance:
     - target: {fileID: 5079454973272805986, guid: a7a3980f9de5e814f963c5d3d36662a9,
         type: 3}
       propertyPath: m_Name
-      value: Orb Variant
+      value: Orb
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -4316406290840707883, guid: a7a3980f9de5e814f963c5d3d36662a9, type: 3}
