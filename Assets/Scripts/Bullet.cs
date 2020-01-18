@@ -16,13 +16,14 @@ public class Bullet : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (!other.transform.CompareTag("Enemy")    ) {
+        
+        if (other.transform.CompareTag("Enemy")) {
+            
+        }
+        else {
             _explosionToDestroy = Explosion;
             Instantiate(_explosionToDestroy, other.GetContact(0).point, Quaternion.identity);
             Destroy(gameObject);
-        }
-        if (other.transform.CompareTag("Player")) {
-            //other.transform.GetComponent<ScriptWithHealth>.Health - Damage;
         }
     }
 }
