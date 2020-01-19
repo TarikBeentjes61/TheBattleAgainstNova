@@ -9,6 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     public float SpecialShootCooldown; //Cooldown van het speciaal schieten
     public float ShootCooldown; //Cooldown van het normaal schieten
     public float BulletSpeed;
+    public float MoveSpeed;
     
     [Header("GameObjects")]
     public GameObject Player;
@@ -21,7 +22,7 @@ public class EnemyBehaviour : MonoBehaviour
     private bool _doingSpecial;
     
     private void Start() {
-        _timeTillSpecial = new Random().Next(6, 10);
+        _timeTillSpecial = new Random().Next(10, 15);
     }
 
     private void Update() {
@@ -40,12 +41,12 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-    private bool _avoidingCollision = false;
+    private bool _avoidingCollision;
+    
     private void MakeMove() {
-        if (CheckNearby() != null && !_avoidingCollision) {
+        if (CheckNearby() && !_avoidingCollision) {
             _avoidingCollision = true;
-            Debug.Log("SomethingNearby");
-            StartCoroutine(MoveAwayFromCollision(CheckNearby()));
+            StartCoroutine(MoveAway(CheckNearby()));
         }
         else if (!_avoidingCollision) {
             Debug.Log("Moving To Player");
@@ -54,24 +55,32 @@ public class EnemyBehaviour : MonoBehaviour
     }
 
     private Collider2D CheckNearby() {
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, 2f, 9);
-        Debug.Log(hitColliders.Length);
-        foreach (var colliderObject in hitColliders) {
-            return colliderObject;
+        LayerMask mask = LayerMask.GetMask("Enemy");
+        Collider2D col = new Collider2D();
+        col = Physics2D.OverlapCircle(transform.position, 1f, mask);
+        if (col.transform != transform) {
+            return col;
         }
         return null;
     }
 
-    private IEnumerator MoveAwayFromCollision(Collider2D col) {
-        while (Vector3.Distance(transform.position, col.transform.position) < 4) {
-            transform.position = Vector3.MoveTowards(transform.position, col.transform.position * -1, 1f * Time.deltaTime);
+    private IEnumerator MoveAway(Collider2D col) {
+        while (Vector3.Distance(transform.position, col.transform.position) < 2 && _avoidingCollision) {
+            if (Vector3.Distance(transform.position, Player.transform.position) < 2.6f) {
+                _avoidingCollision = true;
+            }
+            Debug.Log("Moving away");
+            transform.position = Vector3.Lerp(transform.position, transform.position - col.transform.position, MoveSpeed * Time.deltaTime);
             yield return null;
         }
         _avoidingCollision = false;
     }
+
     
     private void MoveTowardsPlayer() {
-        transform.position = Vector3.Lerp(transform.position, Player.transform.position, 0.3f * Time.deltaTime);
+        if (Vector3.Distance(transform.position, Player.transform.position) > 2.5f) {
+            transform.position = Vector3.Lerp(transform.position, Player.transform.position, MoveSpeed * Time.deltaTime);
+        }
     }
 
     private void LookAt() {
