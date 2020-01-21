@@ -10,9 +10,9 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Bullet.cs" t="Include" />
-          <e p="Enemy.cs" t="Include" />
-          <e p="enemy2.cs" t="Include" />
+          <e p="EnemyBehaviour.cs" t="Include" />
           <e p="Explosion.cs" t="Include" />
+          <e p="TestEnemyBehaviour.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
