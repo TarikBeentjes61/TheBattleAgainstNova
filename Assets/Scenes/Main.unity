@@ -289,6 +289,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5079454973272805986, guid: a7a3980f9de5e814f963c5d3d36662a9,
         type: 3}
+    - target: {fileID: 5140439749110527280, guid: 56508a3288ba8c3429db0d156bf2fcaa,
+        type: 3}
+      propertyPath: SpecialShootCooldown
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5140439749110527283, guid: 56508a3288ba8c3429db0d156bf2fcaa,
         type: 3}
       propertyPath: m_Name
