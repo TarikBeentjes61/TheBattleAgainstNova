@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class takeLife : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        GameControlScript.health -= 1;
+    private void OnCollisionEnter2D(Collision2D other) {
     }
 }

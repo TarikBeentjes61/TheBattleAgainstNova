@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6935594100253484213}
   - component: {fileID: -6720038474201510939}
   - component: {fileID: -3463115400340629981}
+  - component: {fileID: 1484278079830188116}
   m_Layer: 8
   m_Name: Laser
   m_TagString: Bullet
@@ -147,3 +148,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
+--- !u!114 &1484278079830188116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079454973272805986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aafd3d576023344ea3b4603ff15f1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

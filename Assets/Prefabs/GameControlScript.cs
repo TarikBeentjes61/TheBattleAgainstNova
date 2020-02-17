@@ -1,28 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameControlScript : MonoBehaviour
 {
     public GameObject life1, life2, life3, gameOver;
-    public static int health;
-    // Start is called before the first frame update
+    public int health = 3;
+
     void Start()
     {
-        health = 3;
-        life1.gameObject.SetActive(true);
-        life2.gameObject.SetActive(true);
-        life3.gameObject.SetActive(true);
         gameOver.gameObject.SetActive(false);
-        
+    }
+    
+    //Veranderd naar methods omdat update 60 keer per seconde wordt uitgevoerd wat niet erg handig is.
+    //Als er levens worden verandert worden de methods pas uitgevoerd.
+    public void ChangeLife(int addedNumber) {
+        health += addedNumber;
+        if (health > 3) {
+            health = 3;
+        }
+        Debug.Log(health);
+        CheckLife();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (health > 3)
-            health = 3;
-
+    public void CheckLife() {
         switch (health)
         {
             case 3:
