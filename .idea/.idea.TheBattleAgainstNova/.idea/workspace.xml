@@ -4,7 +4,6 @@
     <list default="true" id="7fcacefe-96c5-4e21-88ba-d253215bcd36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBattleAgainstNova/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBattleAgainstNova/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheBattleAgainstNova/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheBattleAgainstNova/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameControlScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameControlScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Laser.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Laser.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/addlife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/addlife.cs" afterDir="false" />
@@ -122,13 +121,13 @@
             <state relative-caret-position="105">
               <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding>
-                <marker date="1581935752639" expanded="true" signature="66:1708" ph="{...}" />
-                <marker date="1581935752639" expanded="true" signature="166:224" ph="{...}" />
-                <marker date="1581935752639" expanded="true" signature="234:403" ph="/* Veranderd naar methods omdat update 60 keer per seconde wordt uitgevoerd wat niet erg handig is. ... */" />
-                <marker date="1581935752639" expanded="true" signature="448:594" ph="{...}" />
-                <marker date="1581935752639" expanded="true" signature="505:540" ph="{...}" />
-                <marker date="1581935752639" expanded="true" signature="624:1706" ph="{...}" />
-                <marker date="1581935752639" expanded="true" signature="649:1700" ph="{...}" />
+                <marker date="1581935849024" expanded="true" signature="66:1708" ph="{...}" />
+                <marker date="1581935849024" expanded="true" signature="166:224" ph="{...}" />
+                <marker date="1581935849024" expanded="true" signature="234:403" ph="/* Veranderd naar methods omdat update 60 keer per seconde wordt uitgevoerd wat niet erg handig is. ... */" />
+                <marker date="1581935849024" expanded="true" signature="448:594" ph="{...}" />
+                <marker date="1581935849024" expanded="true" signature="505:540" ph="{...}" />
+                <marker date="1581935849024" expanded="true" signature="624:1706" ph="{...}" />
+                <marker date="1581935849024" expanded="true" signature="649:1700" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -299,12 +298,12 @@
       <workItem from="1579255309783" duration="7731000" />
       <workItem from="1579360574640" duration="12247000" />
       <workItem from="1579449443422" duration="5758000" />
-      <workItem from="1581933736417" duration="2006000" />
+      <workItem from="1581933736417" duration="2590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43238000" />
+    <option name="totallyTimeSpent" value="43822000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,17 +413,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyBehaviour.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Explosion.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TestEnemyBehaviour.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
           <folding>
             <marker date="1579638840478" expanded="true" signature="58:135" ph="{...}" />
             <marker date="1579638840478" expanded="true" signature="78:133" ph="{...}" />
@@ -494,13 +486,13 @@
         <state relative-caret-position="105">
           <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
-            <marker date="1581935752639" expanded="true" signature="66:1708" ph="{...}" />
-            <marker date="1581935752639" expanded="true" signature="166:224" ph="{...}" />
-            <marker date="1581935752639" expanded="true" signature="234:403" ph="/* Veranderd naar methods omdat update 60 keer per seconde wordt uitgevoerd wat niet erg handig is. ... */" />
-            <marker date="1581935752639" expanded="true" signature="448:594" ph="{...}" />
-            <marker date="1581935752639" expanded="true" signature="505:540" ph="{...}" />
-            <marker date="1581935752639" expanded="true" signature="624:1706" ph="{...}" />
-            <marker date="1581935752639" expanded="true" signature="649:1700" ph="{...}" />
+            <marker date="1581935849024" expanded="true" signature="66:1708" ph="{...}" />
+            <marker date="1581935849024" expanded="true" signature="166:224" ph="{...}" />
+            <marker date="1581935849024" expanded="true" signature="234:403" ph="/* Veranderd naar methods omdat update 60 keer per seconde wordt uitgevoerd wat niet erg handig is. ... */" />
+            <marker date="1581935849024" expanded="true" signature="448:594" ph="{...}" />
+            <marker date="1581935849024" expanded="true" signature="505:540" ph="{...}" />
+            <marker date="1581935849024" expanded="true" signature="624:1706" ph="{...}" />
+            <marker date="1581935849024" expanded="true" signature="649:1700" ph="{...}" />
           </folding>
         </state>
       </provider>
