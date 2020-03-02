@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f4536c20a60b264ca178acfeabb8227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnObject: {fileID: 3944612307895322485, guid: 85aadc323dae717409776c2acc8de271,
+  SpawnObject: {fileID: 3944612307895322485, guid: f1387740109b6ce48a6be5a541b68aa7,
     type: 3}
   TimeBetweenSpawns: 20
   MaxSpawns: 0
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1019756155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b950945d231e7499ca9f49a43e278e, type: 3}
+  m_Script: {fileID: 11500000, guid: 38daf072a415b29469093e3997bae38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   life1: {fileID: 43705893}
@@ -1211,7 +1211,7 @@ RectTransform:
   - {fileID: 851899793}
   - {fileID: 1019756159}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f4536c20a60b264ca178acfeabb8227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnObject: {fileID: 5140439749110527283, guid: 56508a3288ba8c3429db0d156bf2fcaa,
+  SpawnObject: {fileID: 5140439749110527283, guid: a430a485487ed4d4ea392b1aaae4a07d,
     type: 3}
   TimeBetweenSpawns: 2
   MaxSpawns: 0
@@ -1554,7 +1554,7 @@ PrefabInstance:
     - target: {fileID: 784731744622980880, guid: 91b60fe1c399b6841a25154c7a61fb9f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 784731744622980880, guid: 91b60fe1c399b6841a25154c7a61fb9f,
         type: 3}

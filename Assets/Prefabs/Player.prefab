@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  bulletPrefab: {fileID: 5079454973272805986, guid: a7a3980f9de5e814f963c5d3d36662a9,
+  bulletPrefab: {fileID: 5079454973272805986, guid: ebd2339cc1cd357489d020293de68c63,
     type: 3}
   barreltip: {fileID: 3849589489689716126}
   player: {fileID: 784731744622980880}

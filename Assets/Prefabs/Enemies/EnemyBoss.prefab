@@ -196,7 +196,7 @@ MonoBehaviour:
   SpecialShootCooldown: 0.25
   BulletSpeed: 1
   Speed: 0.6
-  Bullet: {fileID: 42158475925839015, guid: 638207430f6bed24f90622353b881e8d, type: 3}
+  Bullet: {fileID: -2183156234727175959, guid: b035b0da9751d5a4c9e1d213aae9ddda, type: 3}
   ShootingPoint:
   - {fileID: 3944612307770915243}
   - {fileID: 3944612308393720682}

@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rb: {fileID: 0}
   Damage: 1
-  Explosion: {fileID: 3348813968923086603, guid: 542943f1001c52c4fb6f8c3f1b491c87,
+  Explosion: {fileID: 3348813968923086603, guid: f8980086c86be2c4d978a7d10e2a2677,
     type: 3}
   Speed: 6
   Shooter: 
