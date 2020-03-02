@@ -238,7 +238,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4899603457536540676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da525781702fd641b3a2242a000c63b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d4f2aa25e8d4ba4683094e59f28513b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 1
@@ -252,10 +252,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4899603457536540676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 942a339715901f44aa65f184f4cfb896, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e8e7a57554dd954c8e7d70e739f8b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPoints: 1
+  Explosion: {fileID: 970112373365996297, guid: a29d392b108dfac4dafa6b436c09bbeb,
+    type: 3}
 --- !u!1 &4899603457939838958
 GameObject:
   m_ObjectHideFlags: 0

@@ -173,7 +173,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1000
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -189,11 +189,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3944612307895322485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edfdf2b5f517f6a4ba8787840431bc5f, type: 3}
+  m_Script: {fileID: 11500000, guid: a6828464f2e52cf4ab1b6185f274c2f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SpecialBulletAmount: 5
-  SpecialShootCooldown: 0.35
+  SpecialShootCooldown: 0.25
   BulletSpeed: 1
   Speed: 0.6
   Bullet: {fileID: 42158475925839015, guid: 638207430f6bed24f90622353b881e8d, type: 3}
@@ -212,11 +212,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3944612307895322485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 942a339715901f44aa65f184f4cfb896, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e8e7a57554dd954c8e7d70e739f8b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPoints: 10
-  Explosion: {fileID: 4649389176467151141, guid: 59eb56ec692579c47821109c8dacaa6b,
+  Explosion: {fileID: 2624989123715958643, guid: 17c61ee4137146646ba6493a16e707af,
     type: 3}
 --- !u!60 &704649135
 PolygonCollider2D:

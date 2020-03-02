@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6125940036576139157}
   - component: {fileID: 6125940036576138346}
+  - component: {fileID: 1576746930957731104}
   m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -47,7 +48,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.3886463, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_LightVolumeOpacity: 0.05
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -66,10 +67,30 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 1
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.34356946, y: -0.20783792, z: 0}
-  - {x: 0.7094558, y: -0.75606376, z: 0}
-  - {x: 0.5190261, y: 0.76075995, z: 0}
-  - {x: -0.19223078, y: 0.35458085, z: 0}
+  - {x: -0.3523357, y: -0.50479144, z: 0}
+  - {x: -0.15425721, y: -0.6105385, z: 0}
+  - {x: 0.18761514, y: -0.43236613, z: 0}
+  - {x: 0.595498, y: -0.24134362, z: 0}
+  - {x: 0.80123264, y: -0.036427587, z: 0}
+  - {x: 0.7732388, y: 0.28563356, z: 0}
+  - {x: 0.41552997, y: 0.22093283, z: 0}
+  - {x: 0.23144524, y: -0.07602149, z: 0}
+  - {x: -0.24482642, y: 0.077424206, z: 0}
+  - {x: -0.426002, y: -0.15520896, z: 0}
+--- !u!114 &1576746930957731104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6125940036576139156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c221d196985bc9841ba0ac4a1373c69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadingSpeed: 2
+  SizeMultiplier: 1.1
 --- !u!1 &6125940037376031366
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,6 +102,7 @@ GameObject:
   - component: {fileID: 6125940037376031386}
   - component: {fileID: 6125940037376031365}
   - component: {fileID: 6125940037376031364}
+  - component: {fileID: 1576746930512012829}
   m_Layer: 0
   m_Name: Explosion2
   m_TagString: Untagged
@@ -96,7 +118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6125940037376031366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 2.15, y: -0.66, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6125940036576139157}
@@ -113,7 +135,7 @@ Animator:
   m_GameObject: {fileID: 6125940037376031366}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 942253966130ed1428df40c692325651, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1589371e4149e5243b845df030df189e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -160,7 +182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -789958583252383640, guid: 74295a5ab5cc172499cc0bdf23d818f3,
+  m_Sprite: {fileID: -789958583252383640, guid: ee4e8def565d17a4abfe69a94b27dd41,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -172,3 +194,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1576746930512012829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6125940037376031366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15784c5c3dfb50449adde804d3e82eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

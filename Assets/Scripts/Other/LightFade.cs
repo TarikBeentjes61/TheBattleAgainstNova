@@ -19,7 +19,6 @@ public class LightFade : MonoBehaviour {
     private void Update() {
         _intensity = Mathf.Lerp(_intensity, 0f,  _time * Time.deltaTime * FadingSpeed);
         _newSize = Mathf.Lerp(_newSize, _size * SizeMultiplier,  _time * Time.deltaTime * FadingSpeed);
-        Debug.Log(_newSize);
         transform.GetComponent<Light2D>().intensity = _intensity;
         transform.localScale = new Vector3(_newSize, _newSize, transform.localScale.z);
     }
