@@ -130,7 +130,12 @@ PrefabInstance:
     - target: {fileID: -6720038474201510939, guid: a7a3980f9de5e814f963c5d3d36662a9,
         type: 3}
       propertyPath: Speed
-      value: 1.2
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6720038474201510939, guid: a7a3980f9de5e814f963c5d3d36662a9,
+        type: 3}
+      propertyPath: Shooter
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: -4316406290840707883, guid: a7a3980f9de5e814f963c5d3d36662a9,
         type: 3}
@@ -138,6 +143,16 @@ PrefabInstance:
       value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: -4316406290840707883, guid: a7a3980f9de5e814f963c5d3d36662a9,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: -3463115400340629981, guid: a7a3980f9de5e814f963c5d3d36662a9,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: -3463115400340629981, guid: a7a3980f9de5e814f963c5d3d36662a9,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.14

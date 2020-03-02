@@ -15,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
-  - Bullets
+  - EnemyBullets
   - Enemy
-  - 
-  - 
+  - EdgeWalls
+  - PlayerBullets
   - 
   - 
   - 

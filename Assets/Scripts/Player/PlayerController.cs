@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -57,6 +55,7 @@ public class PlayerController : MonoBehaviour
     public void shootBullet()
     {
         GameObject firedbullet = Instantiate(bulletPrefab, barreltip.position, barreltip.rotation);
+        firedbullet.GetComponent<Bullet>().Shooter = "Player";
         firedbullet.GetComponent<Rigidbody2D>().velocity = barreltip.up * 10f;
     }
 }

@@ -41,11 +41,12 @@ GameObject:
   - component: {fileID: 3944612307895322251}
   - component: {fileID: 3944612307895322250}
   - component: {fileID: 3944612307895322249}
-  - component: {fileID: 3944612307895322248}
   - component: {fileID: 3944612307895322487}
   - component: {fileID: 3944612307895322486}
+  - component: {fileID: -6990235665313851081}
+  - component: {fileID: 704649135}
   m_Layer: 9
-  m_Name: Enemy (4)
+  m_Name: EnemyBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,8 +147,8 @@ MonoBehaviour:
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 1
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
+  m_PointLightDistance: 1
+  m_PointLightQuality: 0
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -158,7 +159,66 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!60 &3944612307895322248
+--- !u!50 &3944612307895322487
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944612307895322485}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &3944612307895322486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944612307895322485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfdf2b5f517f6a4ba8787840431bc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpecialBulletAmount: 5
+  SpecialShootCooldown: 0.35
+  BulletSpeed: 1
+  Speed: 0.6
+  Bullet: {fileID: 42158475925839015, guid: 638207430f6bed24f90622353b881e8d, type: 3}
+  ShootingPoint:
+  - {fileID: 3944612307770915243}
+  - {fileID: 3944612308393720682}
+  - {fileID: 3944612308362589412}
+  - {fileID: 3944612308664825604}
+  BossPosition: {fileID: 0}
+--- !u!114 &-6990235665313851081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944612307895322485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942a339715901f44aa65f184f4cfb896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 10
+  Explosion: {fileID: 4649389176467151141, guid: 59eb56ec692579c47821109c8dacaa6b,
+    type: 3}
+--- !u!60 &704649135
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,64 +243,33 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.04085473, y: 0.111727595}
-      - {x: 0.02203706, y: 0.13878989}
-      - {x: -0.020930659, y: 0.14126897}
-      - {x: -0.044312507, y: 0.11079705}
-      - {x: -0.07884311, y: 0.13218439}
-      - {x: -0.11939457, y: 0.10704708}
-      - {x: -0.10196389, y: 0.027305603}
-      - {x: -0.055777147, y: -0.022952795}
-      - {x: -0.029246993, y: -0.11234903}
-      - {x: 0.0017349347, y: -0.1437068}
-      - {x: 0.031325333, y: -0.11655152}
-      - {x: 0.03623665, y: -0.0775646}
-      - {x: 0.05441869, y: -0.021726131}
-      - {x: 0.1126175, y: 0.04570341}
-      - {x: 0.12023424, y: 0.10584724}
-      - {x: 0.07751205, y: 0.13284469}
---- !u!50 &3944612307895322487
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3944612307895322485}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &3944612307895322486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3944612307895322485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edfdf2b5f517f6a4ba8787840431bc5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpecialBulletAmount: 50
-  SpecialShootCooldown: 0.15
-  BulletSpeed: 1
-  Bullet: {fileID: 42158475925839015, guid: 638207430f6bed24f90622353b881e8d, type: 3}
-  ShootingPoint:
-  - {fileID: 3944612307770915243}
-  - {fileID: 3944612308393720682}
-  - {fileID: 3944612308362589412}
-  - {fileID: 3944612308664825604}
+    - - {x: 0.505, y: -0.13499999}
+      - {x: 0.615, y: -0.065}
+      - {x: 0.615, y: 0.114999995}
+      - {x: 0.415, y: 0.145}
+      - {x: 0.345, y: 0.235}
+      - {x: 0.225, y: 0.345}
+      - {x: 0.13499999, y: 0.505}
+      - {x: 0.074999996, y: 0.615}
+      - {x: -0.114999995, y: 0.615}
+      - {x: -0.145, y: 0.415}
+      - {x: -0.345, y: 0.255}
+      - {x: -0.39499998, y: 0.114999995}
+      - {x: -0.505, y: 0.13499999}
+      - {x: -0.615, y: 0.074999996}
+      - {x: -0.615, y: -0.044999998}
+      - {x: -0.59499997, y: -0.095}
+      - {x: -0.505, y: -0.125}
+      - {x: -0.345, y: -0.235}
+      - {x: -0.225, y: -0.345}
+      - {x: -0.125, y: -0.405}
+      - {x: -0.114999995, y: -0.565}
+      - {x: -0.085, y: -0.615}
+      - {x: 0.085, y: -0.615}
+      - {x: 0.105, y: -0.60499996}
+      - {x: 0.125, y: -0.505}
+      - {x: 0.235, y: -0.355}
+      - {x: 0.415, y: -0.13499999}
 --- !u!1 &3944612308362589412
 GameObject:
   m_ObjectHideFlags: 0
