@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -6935594100253484213}
   - component: {fileID: -6720038474201510939}
   - component: {fileID: -3463115400340629981}
-  - component: {fileID: 1484278079830188116}
   m_Layer: 8
   m_Name: Laser
   m_TagString: Bullet
@@ -96,9 +95,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -114,14 +113,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5079454973272805986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aefba82f1708904991ee28e0c51e2f2, type: 3}
+  m_Script: {fileID: 11500000, guid: d7546fcea353c5b4ebee190c93ccec53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Rb: {fileID: 0}
   Damage: 1
   Explosion: {fileID: 3348813968923086603, guid: 542943f1001c52c4fb6f8c3f1b491c87,
     type: 3}
-  Speed: 4
+  Speed: 6
   Shooter: 
 --- !u!61 &-3463115400340629981
 BoxCollider2D:
@@ -149,15 +148,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &1484278079830188116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5079454973272805986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aafd3d576023344ea3b4603ff15f1a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

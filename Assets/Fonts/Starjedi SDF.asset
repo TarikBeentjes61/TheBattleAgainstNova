@@ -449,7 +449,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Starjedi Atlas Material
-  m_Shader: {fileID: 4800000, guid: 8cd81831a86f0c44bb24613dc16b4b9a, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0a57b34a33e860d49a287a08ebafa1ba, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -526,6 +526,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _Diffuse: 0.5
+    - _DiffusePower: 1
     - _DstBlend: 0
     - _FaceDilate: 0
     - _FaceUVSpeedX: 0
