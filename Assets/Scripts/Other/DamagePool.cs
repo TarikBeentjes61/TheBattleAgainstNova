@@ -4,7 +4,8 @@ using UnityEngine;
 public class DamagePool : MonoBehaviour {
     public float DamageIntervals = 1f;
     public float ScaleMultiplier = 2f;
-    public float ScaleSpeed = 1f;
+    public float ScaleUpSpeed = 1f;
+    public float ScaleDownSpeed = 2f;
     public float ActiveTime = 5f;
     private float _activeTimer;
     private bool _scalingDown;
@@ -14,16 +15,17 @@ public class DamagePool : MonoBehaviour {
         if (!_scalingDown) {
             if (_activeTimer >= ActiveTime) {
                 _scalingDown = true;
-                StopCoroutine(ScaleUp());
+                StopCoroutine(_scaleUp);
                 StartCoroutine(ScaleDown());
             }
         }
     }
 
+    private Coroutine _scaleUp;
     private void Start() {
         _startingScale = transform.localScale.x;
         _endScale = _startingScale * ScaleMultiplier;
-        StartCoroutine(ScaleUp());
+         _scaleUp = StartCoroutine(ScaleUp());
     }
 
     private float _startingScale;
@@ -33,8 +35,8 @@ public class DamagePool : MonoBehaviour {
 
         while (currentScale <= _endScale) {
             currentScale = transform.localScale.x;
-            Vector2 vec = new Vector2(Mathf.Lerp(currentScale, _endScale, ScaleSpeed * Time.deltaTime)
-                ,Mathf.Lerp(currentScale, _endScale, ScaleSpeed * Time.deltaTime));
+            Vector2 vec = new Vector2(Mathf.Lerp(currentScale, _endScale, ScaleUpSpeed * Time.deltaTime)
+                ,Mathf.Lerp(currentScale, _endScale, ScaleUpSpeed * Time.deltaTime));
             transform.localScale = vec;
             yield return null;
         }
@@ -42,12 +44,12 @@ public class DamagePool : MonoBehaviour {
     
     private IEnumerator ScaleDown() {
         float currentScale = transform.localScale.x;
-        Debug.Log("scaling down");
-        while (currentScale >= _startingScale) {
+
+        while (currentScale >= 0.1f) {
             Debug.Log(currentScale);
             currentScale = transform.localScale.x;
-            Vector2 vec = new Vector2(Mathf.Lerp(currentScale, _startingScale, ScaleSpeed * Time.deltaTime)
-                ,Mathf.Lerp(currentScale, _startingScale, ScaleSpeed * Time.deltaTime));
+            Vector2 vec = new Vector2(Mathf.Lerp(currentScale, 0, ScaleDownSpeed * Time.deltaTime)
+                ,Mathf.Lerp(currentScale, 0, ScaleDownSpeed * Time.deltaTime));
             transform.localScale = vec;
             yield return null;
         }
@@ -72,6 +74,7 @@ public class DamagePool : MonoBehaviour {
     private bool _readyToDamage;
 
     private void OnTriggerEnter2D(Collider2D other) {
+        if (_scalingDown) {return;}
         if (other.gameObject.CompareTag("Player")) {
             GameObject.Find("EventSystem").GetComponent<GameControlScript>().ChangeLife(-1);
         }
@@ -82,6 +85,7 @@ public class DamagePool : MonoBehaviour {
     }
 
     private void OnTriggerStay2D(Collider2D other) {
+        if (_scalingDown) {return;}
         if (!_readyToDamage && !_counting) {
             StartCoroutine(Timer());
         }
@@ -100,6 +104,7 @@ public class DamagePool : MonoBehaviour {
     }
 
     private void OnTriggerExit(Collider other) {
+        if (_scalingDown) {return;}
         StopCoroutine(Timer());
         _readyToDamage = false;
         _counting = false;
