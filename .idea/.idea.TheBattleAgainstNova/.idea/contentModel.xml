@@ -27,6 +27,7 @@
           </e>
           <e p="Other" t="Include">
             <e p="Bullet.cs" t="Include" />
+            <e p="DamagePool.cs" t="Include" />
             <e p="DestroyAfterAnimation.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="LaserExplosion.cs" t="Include" />
