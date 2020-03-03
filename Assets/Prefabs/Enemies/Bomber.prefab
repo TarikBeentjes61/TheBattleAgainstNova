@@ -242,7 +242,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 1
+  ExplosionRange: 1
+  DistanceToExplode: 0.7
+  ExplosionDamage: 1
   Player: {fileID: 0}
+  SelfExplosion: {fileID: 4649389176467151141, guid: d6066399b33a5174a99cfdc7d17df081,
+    type: 3}
 --- !u!114 &4343796180287436984
 MonoBehaviour:
   m_ObjectHideFlags: 0

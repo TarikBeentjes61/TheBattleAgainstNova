@@ -40,8 +40,14 @@ namespace Enemies {
         private void Explode() {
             var col = Physics2D.OverlapCircleAll(transform.position, ExplosionRange);
             foreach (var hit in col) {
+                if (hit.CompareTag("Player")) {
+                    GameObject.Find("EventSystem").GetComponent<GameControlScript>().ChangeLife(-1);               
+                }
+
                 if (hit.GetComponent<Health>()) {
-                    hit.GetComponent<Health>().Damage(ExplosionDamage);                    
+                    if (hit.gameObject != gameObject) {
+                        hit.GetComponent<Health>().Damage(1);
+                    }
                 }
             }
 

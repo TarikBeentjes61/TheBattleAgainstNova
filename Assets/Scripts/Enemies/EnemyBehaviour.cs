@@ -21,26 +21,23 @@ namespace Enemies {
             if (Player == null) {
                 Player = GameObject.FindWithTag("Player");
             }
+
+            _originalShootCooldown = ShootCooldown;
         }
 
         private void Update() {
             _shootTimer += Time.deltaTime;
-            MakeMove();
-            LookAt();
-            if (_shootTimer > ShootCooldown) {
-                Shoot();
-            }
-        }
-
-        private void MakeMove() {
             if (!_movedTowards) {
                 MoveTowardsPlayer();
             }
             else {
                 RandomMovement();            
+            }            LookAt();
+            if (_shootTimer > ShootCooldown) {
+                Shoot();
             }
         }
-    
+
         //Collision check
         /*
     private Collider2D[] CheckNearby() {
@@ -88,7 +85,7 @@ namespace Enemies {
                 _randomPosition = Random.insideUnitCircle * 2f;
                 _pointSet = true;
             }
-            transform.position = Vector2.MoveTowards(transform.position, _randomPosition, MoveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, _randomPosition, MoveSpeed * Time.deltaTime * 2);
             if (transform.position == _randomPosition) {
                 _pointSet = false;
             }
@@ -110,6 +107,8 @@ namespace Enemies {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90), Time.deltaTime * 3);
         }
 
+        private float _originalShootCooldown;
+
         private void Shoot() {
             if (_movedTowards) {
                 GameObject bullet = Bullet;
@@ -118,6 +117,9 @@ namespace Enemies {
                 rb.AddForce(ShootingPoint.transform.up * BulletSpeed);
                 Instantiate(bullet, ShootingPoint.transform.position, ShootingPoint.transform.rotation);
             }
+
+            //Randomize de schiet tijden zodat alle enemies niet op hetzelfde moment schieten.
+            ShootCooldown = _originalShootCooldown * new System.Random().Next(80, 140) / 100;
             _shootTimer = 0;
         }
     }

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class GameControlScript : MonoBehaviour
 {
@@ -7,12 +9,17 @@ public class GameControlScript : MonoBehaviour
 
     void Start()
     {
+        _light2D = GameObject.FindWithTag("Player").GetComponent<Light2D>();
+        _originalIntensity = _light2D.intensity;        
         gameOver.gameObject.SetActive(false);
     }
     
     //Veranderd naar methods omdat update 60 keer per seconde wordt uitgevoerd wat niet erg handig is.
     //Als er levens worden verandert worden de methods pas uitgevoerd.
     public void ChangeLife(int addedNumber) {
+        if (addedNumber < 0) {
+            StartCoroutine(Flash());
+        }
         health += addedNumber;
         if (health > 3) {
             health = 3;
@@ -20,7 +27,36 @@ public class GameControlScript : MonoBehaviour
         Debug.Log(health);
         CheckLife();
     }
+    //Een flash voor feedback dat er iets is geraakt
+    private Light2D _light2D;
+    private float _intensity;
+    private float _originalIntensity;
+    private bool _flashCompleted;
+    private bool _coroutineComplete;
+    
+    private IEnumerator Flash() {
+        _intensity = _originalIntensity;
+        while (!_coroutineComplete) {
+            if (!_flashCompleted) {
+                _intensity = Mathf.Lerp(_intensity, 4f, 10f * Time.deltaTime);
+                _light2D.intensity = _intensity;
+                if (_intensity >= 3.5f) {
+                    _flashCompleted = true;
+                }
+            } else {
+                _intensity = Mathf.Lerp(_intensity, _originalIntensity, 10f * Time.deltaTime);
+                _light2D.intensity = _intensity;
+                if (_intensity <= _originalIntensity) {
+                    _coroutineComplete = true;
+                }
+            }
 
+            yield return null;
+        }
+        _flashCompleted = false;
+        _coroutineComplete = false;
+
+    }
     public void CheckLife() {
         switch (health)
         {

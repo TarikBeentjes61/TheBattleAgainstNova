@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6270125538661978917}
   - component: {fileID: 6556753668094563277}
   - component: {fileID: 7796260739448639196}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 784731744622980883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.03, y: -1.635, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.76515, y: 0.76515, z: 0.76515}
   m_Children:
   - {fileID: 3849589489689716126}
   m_Father: {fileID: 0}
@@ -213,10 +213,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 150
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -231,7 +231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3849589489689716126}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
