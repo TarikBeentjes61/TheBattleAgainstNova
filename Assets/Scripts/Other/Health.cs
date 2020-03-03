@@ -4,7 +4,7 @@ public class Health : MonoBehaviour {
     public int HealthPoints;
     public GameObject Explosion;
     
-    public void ChangeHealth(int damage) {
+    public void Damage(int damage) {
         HealthPoints -= damage;
         if (HealthPoints <= 0) {
             Explode();

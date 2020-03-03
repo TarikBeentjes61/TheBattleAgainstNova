@@ -1,53 +1,31 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Enemies {
     [RequireComponent(typeof(Health))]
     public class Bomber : MonoBehaviour
     {
         [Header("Variables")]
-        public float MoveSpeed = 1;
+        public float MoveSpeed = 1f;
+        public float ExplosionRange = 1f;
+        public float DistanceToExplode = 0.7f;
+        public int ExplosionDamage = 1;
     
         [Header("GameObjects")]
         public GameObject Player;
-    
+        public GameObject SelfExplosion;
+
+        private void Start() {
+            if (Player == null) {
+                Player = GameObject.Find("Player");
+            }
+        }
+
         private void Update() {
-            MakeMove();
+            MoveTowardsPlayer();
             LookAt();
-        }
-
-        private bool _avoidingCollision;
-    
-        private void MakeMove() {
-            if (CheckNearby() && !_avoidingCollision) {
-                _avoidingCollision = true;
-                StartCoroutine(MoveAway(CheckNearby()));
-            }
-            if (CheckNearby() == null && !_avoidingCollision) {
-                Debug.Log("Moving To Player");
-                MoveTowardsPlayer();  
-            }
-            if (Vector3.Distance(transform.position, Player.transform.position)  < 0.7f) {
-                GetComponent<Health>().Explode();
-            }
-        }
-
-        private Collider2D CheckNearby() {
-            LayerMask mask = LayerMask.GetMask("Enemy");
-            var col = Physics2D.OverlapCircle(transform.position, 1f, mask);
-            return col.transform != transform ? col : null;
-        }
-
-        private IEnumerator MoveAway(Collider2D col) {
-            while (Vector3.Distance(transform.position, col.transform.position) < 1f && _avoidingCollision) {
-                if (Vector3.Distance(transform.position, Player.transform.position) < 1f) {
-                    _avoidingCollision = true;
-                }
-                Debug.Log("Moving away");
-                transform.position = Vector3.Lerp(transform.position, transform.position - col.transform.position, MoveSpeed * Time.deltaTime);
-                yield return null;
-            }
-            _avoidingCollision = false;
+            if (Vector2.Distance(transform.position, Player.transform.position) < DistanceToExplode) {
+                Explode();
+            }            
         }
 
         private void MoveTowardsPlayer() {
@@ -57,6 +35,18 @@ namespace Enemies {
         private void LookAt() {
             Vector2 dir = Player.transform.position - transform.position;
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90), 1);
+        }
+
+        private void Explode() {
+            var col = Physics2D.OverlapCircleAll(transform.position, ExplosionRange);
+            foreach (var hit in col) {
+                if (hit.GetComponent<Health>()) {
+                    hit.GetComponent<Health>().Damage(ExplosionDamage);                    
+                }
+            }
+
+            Instantiate(SelfExplosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
 
     }

@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.transform.CompareTag("Enemy")) {
             if (Shooter == "Player") {
-                other.gameObject.GetComponent<Health>().ChangeHealth(Damage);
+                other.gameObject.GetComponent<Health>().Damage(Damage);
             }
         }
 
