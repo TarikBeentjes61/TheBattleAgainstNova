@@ -28,6 +28,7 @@
           <e p="Other" t="Include">
             <e p="Bullet.cs" t="Include" />
             <e p="DamagePool.cs" t="Include" />
+            <e p="DeleteBullet.cs" t="Include" />
             <e p="DestroyAfterAnimation.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="LaserExplosion.cs" t="Include" />
@@ -36,7 +37,6 @@
           </e>
           <e p="Player" t="Include">
             <e p="CameraFollow.cs" t="Include" />
-            <e p="CameraLimits.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="projectileplayer.cs" t="Include" />
           </e>

@@ -37,10 +37,12 @@ namespace Enemies {
             }
         }
 
+        //Simpel script om naar de speler te vliegen.
         private void MoveTowardsPlayer() {
             transform.position = Vector3.Lerp(transform.position, Player.transform.position, MoveSpeed * Time.deltaTime);
         }
 
+        //Simpel script om naar de speler te kijken.
         private void LookAt() {
             Vector2 dir = Player.transform.position - transform.position;
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90), 1);
@@ -51,6 +53,7 @@ namespace Enemies {
         private float _originalIntensity;
         private bool _coroutineComplete;
     
+        //Flash wordt uitgevoerd als de bomber gaat exploderen, geeft een waarschuwing aan de speler om ervan weg te vliegen.
         private IEnumerator Flash() {
             _flashing = true;
             _intensity = _originalIntensity;
@@ -66,16 +69,18 @@ namespace Enemies {
             _coroutineComplete = false;
 
         }
+        //Explode wordt uitgevoerd als de flash klaar is, het zoekt alle objecten om zich heen en haalt 1 leven van hun af.
+        //Nadat er levens vanaf zijn gehaald explodeerd hij en laat hij een damagepool achter.
         private void Explode() {
             var col = Physics2D.OverlapCircleAll(transform.position, ExplosionRange);
             foreach (var hit in col) {
                 if (hit.CompareTag("Player")) {
-                    GameObject.Find("EventSystem").GetComponent<GameControlScript>().ChangeLife(-1);               
+                    GameObject.Find("EventSystem").GetComponent<GameControlScript>().ChangeLife(-ExplosionDamage);               
                 }
 
                 if (hit.GetComponent<Health>()) {
                     if (hit.gameObject != gameObject) {
-                        hit.GetComponent<Health>().Damage(1);
+                        hit.GetComponent<Health>().Damage(ExplosionDamage);
                     }
                 }
             }

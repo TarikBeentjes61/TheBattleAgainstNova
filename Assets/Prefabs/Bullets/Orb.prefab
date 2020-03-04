@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 993452678963863074}
   - component: {fileID: 4209386213306018032}
   - component: {fileID: -6907182099973670841}
+  - component: {fileID: -2752476426620623224}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Untagged
@@ -155,10 +156,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1616776531
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3121716896129480207, guid: b916adff6e6e20143835a63c55df012d,
+  m_Sprite: {fileID: 3197065517310700028, guid: b916adff6e6e20143835a63c55df012d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -170,6 +171,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2752476426620623224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: -2183156234727175959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 0
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.485
+  m_Color: {r: 1, g: 0.2971698, b: 0.2971698, a: 1}
+  m_Intensity: 1
+  m_LightVolumeOpacity: 0.084
+  m_ApplyToSortingLayers: 759bffdc530d5e60
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 0.1
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 0.05
+  m_ShapeLightFalloffSize: 0.05
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.02472192, y: -0.04916978, z: 0}
+  - {x: 0.028589278, y: -0.052152812, z: 0}
+  - {x: 0.029150903, y: 0.048079252, z: 0}
+  - {x: -0.029247135, y: 0.05050087, z: 0}
 --- !u!1 &747037580756923735
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2403977458143324926}
   - component: {fileID: 2403977458143324927}
   - component: {fileID: 1201075263367036845}
+  - component: {fileID: 6914233468739823289}
+  - component: {fileID: 6675675842167898819}
   m_Layer: 0
   m_Name: BomberExplosion
   m_TagString: Untagged
@@ -28,9 +30,8 @@ Transform:
   m_GameObject: {fileID: 2403977458143324897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.72, y: 0.82, z: 1}
-  m_LocalScale: {x: 0.13503194, y: 0.13503194, z: 0.13503194}
-  m_Children:
-  - {fileID: 2062218413724389433}
+  m_LocalScale: {x: 0.46307853, y: 0.46307853, z: 0.46307853}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88,8 +89,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1616776531
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1036348413749657139, guid: 5244c518d07f88a438a81e8b70a1d7f9,
     type: 3}
@@ -115,45 +116,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15784c5c3dfb50449adde804d3e82eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &6790681254914941558
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2062218413724389433}
-  - component: {fileID: 6766052070832779679}
-  - component: {fileID: 1241605033164688849}
-  m_Layer: 0
-  m_Name: Point Light 2D
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2062218413724389433
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6790681254914941558}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3210438, y: 1.3094164, z: 1.1512364}
-  m_Children: []
-  m_Father: {fileID: 2403977458143324925}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6766052070832779679
+--- !u!114 &6914233468739823289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6790681254914941558}
+  m_GameObject: {fileID: 2403977458143324897}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
@@ -165,7 +134,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.25939333, b: 0.2216981, a: 1}
   m_Intensity: 2
   m_LightVolumeOpacity: 0.1
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000530d5e60
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -191,13 +160,13 @@ MonoBehaviour:
   - {x: -0.44498444, y: 0.8577119, z: 0}
   - {x: -0.828774, y: 0.9004563, z: 0}
   - {x: -1.3101497, y: 0.15999621, z: 0}
---- !u!114 &1241605033164688849
+--- !u!114 &6675675842167898819
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6790681254914941558}
+  m_GameObject: {fileID: 2403977458143324897}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c221d196985bc9841ba0ac4a1373c69d, type: 3}

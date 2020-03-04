@@ -15,6 +15,7 @@ public class CameraFollow : MonoBehaviour {
     [SerializeField]
     private float _bottomLimit;
 
+    //Zoek alle hoeken van de map zodat de camera er niet uit kan
     private void Start() {
         float vertExtent = gameObject.GetComponent<Camera>().orthographicSize;  
         float horzExtent = vertExtent * Screen.width / Screen.height;
@@ -26,6 +27,7 @@ public class CameraFollow : MonoBehaviour {
         _topLimit = _background.sprite.bounds.size.y  / 2.1f;    
     }
 
+    //Volgt de speler tot er een limiet is bereikt.
     private void FixedUpdate() {
         Vector3 desiredPosition = new Vector3(
             Mathf.Clamp(Target.position.x, _leftLimit, _rightLimit),

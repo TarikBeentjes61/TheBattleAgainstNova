@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour {
     void Start() {
         Rb = GetComponent<Rigidbody2D>();
         Rb.velocity = transform.up * Speed;
+        //Check wie de kogel heeft geschoten zodat ze hun eigen team niet kunnen raken.
         if (Shooter == "Player") {
             gameObject.layer = LayerMask.NameToLayer("PlayerBullets");
         }
@@ -36,7 +37,6 @@ public class Bullet : MonoBehaviour {
     }
 
     private void Explode() {
-        Debug.Log("Explode");
         Instantiate(Explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

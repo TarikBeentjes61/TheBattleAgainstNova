@@ -16,6 +16,7 @@ public class LightFade : MonoBehaviour {
         _time = GetComponentInParent<Animator>().GetCurrentAnimatorStateInfo(0).length;
     }
 
+    //Maakt het licht op het object steeds minder zodat het lijkt alsof het verdwijnt.
     private void Update() {
         _intensity = Mathf.Lerp(_intensity, 0f,  _time * Time.deltaTime * FadingSpeed);
         _newSize = Mathf.Lerp(_newSize, _size * SizeMultiplier,  _time * Time.deltaTime * FadingSpeed);

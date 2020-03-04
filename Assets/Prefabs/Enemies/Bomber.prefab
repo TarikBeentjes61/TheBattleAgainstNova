@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 4899603457536540793}
   - component: {fileID: 4899603457536540678}
   - component: {fileID: 4899603457536540792}
-  - component: {fileID: 4899603457536540795}
   - component: {fileID: 4899603457536540794}
   - component: {fileID: 335625742572631836}
   - component: {fileID: 335625742052588381}
   - component: {fileID: 4343796180287436984}
+  - component: {fileID: 8972696536228584665}
   m_Layer: 9
   m_Name: Bomber
   m_TagString: Enemy
@@ -31,10 +31,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4899603457536540676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4899603457939838945}
+  m_LocalPosition: {x: 0.072, y: 0, z: 1}
+  m_LocalScale: {x: 1.4645, y: 1.4645, z: 1.4645}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,15 +72,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1616776531
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 16c0917aa151a43499e3c5899fbecd09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45818f8ef06919a4a8873b3471ec03a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.22, y: 0.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,15 +101,15 @@ MonoBehaviour:
   m_LightType: 2
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.086734705, b: 0, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.5
   m_LightVolumeOpacity: 1
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: 16c0917aa151a43499e3c5899fbecd09,
+  m_ApplyToSortingLayers: 00000000530d5e60
+  m_LightCookieSprite: {fileID: 21300000, guid: 45818f8ef06919a4a8873b3471ec03a7,
     type: 3}
   m_UseNormalMap: 0
-  m_LightOrder: 1
-  m_AlphaBlendOnOverlap: 1
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -127,47 +126,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!60 &4899603457536540795
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4899603457536540676}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.04085473, y: 0.111727595}
-      - {x: 0.02203706, y: 0.13878989}
-      - {x: -0.020930659, y: 0.14126897}
-      - {x: -0.044312507, y: 0.11079705}
-      - {x: -0.07884311, y: 0.13218439}
-      - {x: -0.11939457, y: 0.10704708}
-      - {x: -0.10196389, y: 0.027305603}
-      - {x: -0.055777147, y: -0.022952795}
-      - {x: -0.029246993, y: -0.11234903}
-      - {x: 0.0017349347, y: -0.1437068}
-      - {x: 0.031325333, y: -0.11655152}
-      - {x: 0.03623665, y: -0.0775646}
-      - {x: 0.05441869, y: -0.021726131}
-      - {x: 0.1126175, y: 0.04570341}
-      - {x: 0.12023424, y: 0.10584724}
-      - {x: 0.07751205, y: 0.13284469}
 --- !u!50 &4899603457536540794
 Rigidbody2D:
   serializedVersion: 4
@@ -206,8 +164,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 0.22, y: 0.29}
+    newSize: {x: 0.22, y: 0.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -242,9 +200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 1
-  ExplosionRange: 1
-  DistanceToExplode: 0.55
-  DetonationSpeed: 1.8
+  ExplosionRange: 0.7
+  DistanceToExplode: 0.8
+  DetonationSpeed: 1.9
   ExplosionDamage: 1
   Player: {fileID: 0}
   SelfExplosion: {fileID: 2403977458143324897, guid: 74317dc83f9306f4f93f292fdee81f79,
@@ -264,35 +222,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPoints: 1
-  Explosion: {fileID: 970112373365996297, guid: a29d392b108dfac4dafa6b436c09bbeb,
+  Explosion: {fileID: 4649389176467151141, guid: d6066399b33a5174a99cfdc7d17df081,
     type: 3}
---- !u!1 &4899603457939838958
-GameObject:
+--- !u!61 &8972696536228584665
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4899603457939838945}
-  m_Layer: 0
-  m_Name: ShootingPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4899603457939838945
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4899603457939838958}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: -0.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4899603457536540793}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_GameObject: {fileID: 4899603457536540676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.002791062, y: -0.0013940334}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.22, y: 0.29}
+    newSize: {x: 0.22, y: 0.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.19506904, y: 0.45241553}
+  m_EdgeRadius: 0

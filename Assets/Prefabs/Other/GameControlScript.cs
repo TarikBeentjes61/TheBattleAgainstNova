@@ -24,7 +24,6 @@ public class GameControlScript : MonoBehaviour
         if (health > 3) {
             health = 3;
         }
-        Debug.Log(health);
         CheckLife();
     }
     //Een flash voor feedback dat er iets is geraakt
@@ -57,6 +56,7 @@ public class GameControlScript : MonoBehaviour
         _coroutineComplete = false;
 
     }
+    
     public void CheckLife() {
         switch (health)
         {

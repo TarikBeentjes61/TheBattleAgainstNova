@@ -8,6 +8,7 @@ namespace Enemies {
         public float ShootCooldown = 2f; //Cooldown van het normaal schieten
         public float BulletSpeed = 1f;
         public float MoveSpeed = 0.5f;
+        public float MoveTime = 2.2f;
     
         [Header("GameObjects")]
         public GameObject Player;
@@ -77,6 +78,7 @@ namespace Enemies {
         return false;
     }
     */
+        
         //Random positie in een cirkel om het object heen.
         private bool _pointSet;
         private Vector3 _randomPosition;
@@ -93,15 +95,18 @@ namespace Enemies {
 
         private bool _movedTowards;
         private float _moveTimer;
+        //Eerste paar seconden beweeg naar de speler.
         private void MoveTowardsPlayer() {
             _moveTimer += Time.deltaTime;
             transform.position = Vector2.Lerp(transform.position, Player.transform.position,
                 MoveSpeed * Time.deltaTime);
-            if (_moveTimer > 3) {
+            if (_moveTimer > MoveTime) {
                 _movedTowards = true;
+                Shoot();
             }
         }
 
+        //Simpel script om naar de speler te kijken.
         private void LookAt() {
             Vector2 dir = Player.transform.position - transform.position;
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90), Time.deltaTime * 3);

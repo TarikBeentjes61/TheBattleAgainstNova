@@ -14,6 +14,7 @@ public class RandomLight : MonoBehaviour {
     }
     private float _value;
 
+    //Script om een object steeds een nieuwe kleur te geven van een gradient.
     void Update() {
         if (!_switch) {
             _value = Mathf.Lerp(0f, 1f, _timeTo);
@@ -23,7 +24,6 @@ public class RandomLight : MonoBehaviour {
             }
         }
         else {
-            Debug.Log(_switch);
             _value = Mathf.Lerp(1f, 0f, _timeTo);
             if (_value <= 0) {
                 _switch = false;

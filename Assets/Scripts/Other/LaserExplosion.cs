@@ -5,6 +5,7 @@ public class LaserExplosion : MonoBehaviour {
     void Update() {
         StartCoroutine(FadeTo(0.0f, 0.5f));
     }
+    //Script om de laserexplosie langzaam onzichtbaar te maken en dan verwijderen.
     private IEnumerator FadeTo(float aValue, float aTime)
     {
         float alpha = transform.GetComponent<SpriteRenderer>().color.a;

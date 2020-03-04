@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5837926175718357879}
   - component: {fileID: 7723121341038639384}
   - component: {fileID: 6969614946736595414}
+  - component: {fileID: 251218957357579645}
+  - component: {fileID: 3498785070190024593}
   m_Layer: 0
   m_Name: Explosion1
   m_TagString: Untagged
@@ -29,8 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.35, y: -1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6969614946970697835}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,7 +46,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 766fd73e3f4847e42affa0230f2f8058, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -88,8 +89,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1616776531
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 309450922566917281, guid: 8529d385066876e45879a31c357d43a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114,45 +115,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15784c5c3dfb50449adde804d3e82eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &6969614946970697834
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6969614946970697835}
-  - component: {fileID: 6969614946970697837}
-  - component: {fileID: 6969614946970697836}
-  m_Layer: 0
-  m_Name: Point Light 2D
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6969614946970697835
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6969614946970697834}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.358067, y: 0.38832974, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7183832231701072356}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6969614946970697837
+--- !u!114 &251218957357579645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6969614946970697834}
+  m_GameObject: {fileID: 970112373365996297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
@@ -163,8 +132,8 @@ MonoBehaviour:
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.3886463, b: 0, a: 1}
   m_Intensity: 2
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_LightVolumeOpacity: 0.12
+  m_ApplyToSortingLayers: 530d5e60759bffdc
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -177,7 +146,7 @@ MonoBehaviour:
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 48
   m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
+  m_ShapeLightParametricRadius: 0.3
   m_ShapeLightFalloffSize: 1
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
@@ -191,17 +160,17 @@ MonoBehaviour:
   - {x: 0.23144524, y: -0.07602149, z: 0}
   - {x: -0.24482642, y: 0.077424206, z: 0}
   - {x: -0.426002, y: -0.15520896, z: 0}
---- !u!114 &6969614946970697836
+--- !u!114 &3498785070190024593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6969614946970697834}
+  m_GameObject: {fileID: 970112373365996297}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c221d196985bc9841ba0ac4a1373c69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FadingSpeed: 2
-  SizeMultiplier: 1.1
+  SizeMultiplier: 1.3

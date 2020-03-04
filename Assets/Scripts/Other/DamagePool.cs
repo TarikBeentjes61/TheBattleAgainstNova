@@ -10,6 +10,7 @@ public class DamagePool : MonoBehaviour {
     private float _activeTimer;
     private bool _scalingDown;
 
+    //Na een bepaalde tijd wordt de methode scaledown geroepen.
     private void Update() {
         _activeTimer += Time.deltaTime;
         if (!_scalingDown) {
@@ -30,6 +31,7 @@ public class DamagePool : MonoBehaviour {
 
     private float _startingScale;
     private float _endScale;
+    //Methode maakt het object steeds groter tot een limiet.
     private IEnumerator ScaleUp() {
         float currentScale = transform.localScale.x;
 
@@ -41,12 +43,11 @@ public class DamagePool : MonoBehaviour {
             yield return null;
         }
     }
-    
+    //Methode maakt het object steeds kleiner tot 0.1 dan wordt het object verwijderd
     private IEnumerator ScaleDown() {
         float currentScale = transform.localScale.x;
 
         while (currentScale >= 0.1f) {
-            Debug.Log(currentScale);
             currentScale = transform.localScale.x;
             Vector2 vec = new Vector2(Mathf.Lerp(currentScale, 0, ScaleDownSpeed * Time.deltaTime)
                 ,Mathf.Lerp(currentScale, 0, ScaleDownSpeed * Time.deltaTime));
@@ -59,6 +60,7 @@ public class DamagePool : MonoBehaviour {
     private float _timer;
     private bool _counting;
 
+    //De timer houd bij hoelang het nodig heeft om damage op de speler te doen.
     private IEnumerator Timer() {
         _counting = true;
         while (_timer < DamageIntervals) {
@@ -73,6 +75,7 @@ public class DamagePool : MonoBehaviour {
 
     private bool _readyToDamage;
 
+    //Als er iets het gebied binnen loopt neemt het damage op.
     private void OnTriggerEnter2D(Collider2D other) {
         if (_scalingDown) {return;}
         if (other.gameObject.CompareTag("Player")) {
@@ -84,6 +87,7 @@ public class DamagePool : MonoBehaviour {
         }
     }
 
+    //Als er iets lang genoeg in het gebied is neemt het damage op.
     private void OnTriggerStay2D(Collider2D other) {
         if (_scalingDown) {return;}
         if (!_readyToDamage && !_counting) {
@@ -103,7 +107,8 @@ public class DamagePool : MonoBehaviour {
         }
     }
 
-    private void OnTriggerExit(Collider other) {
+    //Als er iets het gebied verlaat wordt de timer gereset.
+    private void OnTriggerExit2D(Collider2D other) {
         if (_scalingDown) {return;}
         StopCoroutine(Timer());
         _readyToDamage = false;
