@@ -3,6 +3,7 @@ using Random = System.Random;
 
 public class Spawner : MonoBehaviour {
     public GameObject SpawnObject;
+
     public float TimeBetweenSpawns;
     public int MaxSpawns;
 
@@ -25,6 +26,7 @@ public class Spawner : MonoBehaviour {
         if (_timer > TimeBetweenSpawns) {
             int random = new Random().Next(0, _spawnPositions.Length);
             Instantiate(SpawnObject, _spawnPositions[random], Quaternion.identity);
+
             _timer = 0;
             if (MaxSpawns != 0) {
                 _spawns++;

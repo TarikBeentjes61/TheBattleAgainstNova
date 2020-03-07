@@ -6,8 +6,13 @@ public class Bullet : MonoBehaviour {
     public GameObject Explosion;
     public float Speed;
     public string Shooter;
+    public GameObject SpawnPowerUp;
+    public Vector3 position;
+
+
 
     void Start() {
+
         Rb = GetComponent<Rigidbody2D>();
         Rb.velocity = transform.up * Speed;
         if (Shooter == "Player") {
@@ -24,7 +29,15 @@ public class Bullet : MonoBehaviour {
                 other.gameObject.GetComponent<Health>().Damage(Damage);
 
             }
-            ScoreScript.ScoreValue1 += 5;
+            int powerup = 1;
+
+            ScoreScript.ScoreValue += 5;
+            if (Random.Range(0, 50) == powerup)
+            {
+                position = new Vector3(Random.Range(100.0F, 1000.0F), 70, Random.Range(100.0F, 1000.0F));
+
+                Instantiate(SpawnPowerUp, position, Quaternion.identity);
+            }
 
         }
 
