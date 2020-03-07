@@ -8,16 +8,16 @@ public class ScoreScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static int ScoreValue1 = 0;
-    Text score1;
+    public static int ScoreValue = 0;
+    Text score;
     void Start()
     {
-        score1 = GetComponent<Text>();   
+        score = GetComponent<Text>();   
     }
 
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score " + ScoreValue1;
+        score.text = "Score " + ScoreValue;
     }
 }

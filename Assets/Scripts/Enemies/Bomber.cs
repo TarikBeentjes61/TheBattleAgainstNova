@@ -43,7 +43,6 @@ namespace Enemies {
             foreach (var hit in col) {
                 if (hit.CompareTag("Player")) {
                     GameObject.Find("EventSystem").GetComponent<GameControlScript>().ChangeLife(-1);
-                    ScoreScript.ScoreValue += 10;
 
                 }
 

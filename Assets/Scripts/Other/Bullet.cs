@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour {
                 other.gameObject.GetComponent<Health>().Damage(Damage);
 
             }
-            ScoreScript.ScoreValue += 5;
+            ScoreScript.ScoreValue1 += 5;
 
         }
 
