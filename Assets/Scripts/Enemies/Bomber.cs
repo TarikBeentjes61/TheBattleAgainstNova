@@ -38,10 +38,13 @@ namespace Enemies {
         }
 
         private void Explode() {
+
             var col = Physics2D.OverlapCircleAll(transform.position, ExplosionRange);
             foreach (var hit in col) {
                 if (hit.CompareTag("Player")) {
-                    GameObject.Find("EventSystem").GetComponent<GameControlScript>().ChangeLife(-1);               
+                    GameObject.Find("EventSystem").GetComponent<GameControlScript>().ChangeLife(-1);
+                    ScoreScript.ScoreValue += 10;
+
                 }
 
                 if (hit.GetComponent<Health>()) {

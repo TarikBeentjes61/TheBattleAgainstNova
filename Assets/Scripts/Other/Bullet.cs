@@ -22,13 +22,17 @@ public class Bullet : MonoBehaviour {
         if (other.transform.CompareTag("Enemy")) {
             if (Shooter == "Player") {
                 other.gameObject.GetComponent<Health>().Damage(Damage);
+
             }
+            ScoreScript.ScoreValue += 5;
+
         }
 
         if (other.transform.CompareTag("Player")) {
             if (Shooter == "Enemy") {
                 //Zoek naar het object Eventsystem en pak het script die de levens besturen, geef dan een min getal mee.
                 GameObject.Find("EventSystem").GetComponent<GameControlScript>().ChangeLife(-Damage);
+
             }
         }
 
@@ -39,6 +43,7 @@ public class Bullet : MonoBehaviour {
         Debug.Log("Explode");
         Instantiate(Explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
+
     }
 
 }
