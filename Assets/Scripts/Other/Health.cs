@@ -3,8 +3,12 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering.LWRP;
 
 public class Health : MonoBehaviour {
+    public float ScoreValue = 10;
     public int HealthPoints;
     public GameObject Explosion;
+    public GameObject SpawnPowerUp;
+    public int DropChance = 10;
+    private ScoreScript _scoreScript;
     
     public void Damage(int damage) {
         HealthPoints -= damage;
@@ -16,9 +20,20 @@ public class Health : MonoBehaviour {
         }
     }
 
+    //Spawn powerup en update score
     public void Explode() {
+        if (Random.Range(0, 100) < DropChance)
+        {
+            Instantiate(SpawnPowerUp, transform.position, Quaternion.identity);
+        }
         Instantiate(Explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    private void OnDestroy() {
+        if (_scoreScript) {
+            _scoreScript.UpdateScore(ScoreValue);            
+        }
     }
 
     //Een flash voor feedback dat er iets is geraakt
@@ -29,6 +44,7 @@ public class Health : MonoBehaviour {
     private bool _coroutineComplete;
     
     private void Start() {
+        _scoreScript = GameObject.Find("ScoreText").GetComponent<ScoreScript>();
         _light2D = GetComponent<Light2D>();
         _originalIntensity = _light2D.intensity;
     }

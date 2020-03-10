@@ -1,23 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 
 public class ScoreScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    public static int ScoreValue = 0;
-    Text score;
+    private Text _score;
+    private float _currentScore;
     void Start()
     {
-        score = GetComponent<Text>();   
+        _score = GetComponent<Text>();
+        _score.text = "Score 0";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        score.text = "Score " + ScoreValue;
+    public void UpdateScore(float scorevalue) {
+        _currentScore += scorevalue;
+        _score.text = "Score " + _currentScore;
     }
 }

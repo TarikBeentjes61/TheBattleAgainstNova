@@ -122,6 +122,9 @@ MonoBehaviour:
     type: 3}
   Speed: 6
   Shooter: 
+  SpawnPowerUp: {fileID: 5462573380237617318, guid: e112106e8b9e65141b018fba21108b55,
+    type: 3}
+  position: {x: 0, y: 0, z: 0}
 --- !u!61 &-3463115400340629981
 BoxCollider2D:
   m_ObjectHideFlags: 0

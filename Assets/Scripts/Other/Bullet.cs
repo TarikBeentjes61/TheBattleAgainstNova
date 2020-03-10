@@ -6,10 +6,6 @@ public class Bullet : MonoBehaviour {
     public GameObject Explosion;
     public float Speed;
     public string Shooter;
-    public GameObject SpawnPowerUp;
-    public Vector3 position;
-
-
 
     void Start() {
 
@@ -27,16 +23,6 @@ public class Bullet : MonoBehaviour {
         if (other.transform.CompareTag("Enemy")) {
             if (Shooter == "Player") {
                 other.gameObject.GetComponent<Health>().Damage(Damage);
-
-            }
-            int powerup = 1;
-
-            ScoreScript.ScoreValue += 5;
-            if (Random.Range(0, 50) == powerup)
-            {
-                position = new Vector3(Random.Range(100.0F, 1000.0F), 70, Random.Range(100.0F, 1000.0F));
-
-                Instantiate(SpawnPowerUp, position, Quaternion.identity);
             }
 
         }
@@ -53,7 +39,6 @@ public class Bullet : MonoBehaviour {
     }
 
     private void Explode() {
-        Debug.Log("Explode");
         Instantiate(Explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
 

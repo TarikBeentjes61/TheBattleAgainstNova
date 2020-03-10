@@ -245,6 +245,7 @@ MonoBehaviour:
   ExplosionRange: 1
   DistanceToExplode: 0.7
   ExplosionDamage: 1
+  ScoreValue: 10
   Player: {fileID: 0}
   SelfExplosion: {fileID: 4649389176467151141, guid: d6066399b33a5174a99cfdc7d17df081,
     type: 3}
@@ -260,9 +261,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e8e7a57554dd954c8e7d70e739f8b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreValue: 12
   HealthPoints: 1
   Explosion: {fileID: 970112373365996297, guid: a29d392b108dfac4dafa6b436c09bbeb,
     type: 3}
+  SpawnPowerUp: {fileID: 8224974920023964333, guid: 1b536d44ba97d3e4aa4b94b7e973b183,
+    type: 3}
+  DropChance: 10
 --- !u!1 &4899603457939838958
 GameObject:
   m_ObjectHideFlags: 0

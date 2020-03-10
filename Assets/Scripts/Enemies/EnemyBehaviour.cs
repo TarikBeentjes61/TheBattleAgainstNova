@@ -8,6 +8,7 @@ namespace Enemies {
         public float ShootCooldown = 2f; //Cooldown van het normaal schieten
         public float BulletSpeed = 1f;
         public float MoveSpeed = 0.5f;
+        public float ScoreValue = 10;
     
         [Header("GameObjects")]
         public GameObject Player;

@@ -9,6 +9,7 @@ namespace Enemies {
         public float ExplosionRange = 1f;
         public float DistanceToExplode = 0.7f;
         public int ExplosionDamage = 1;
+        public float ScoreValue = 10;
     
         [Header("GameObjects")]
         public GameObject Player;
