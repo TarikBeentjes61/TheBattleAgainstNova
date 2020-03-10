@@ -3,7 +3,6 @@
 public class CameraFollow : MonoBehaviour {
     public Transform Target;
     public float SmoothSpeed = 0.125f;
-    public Vector3 OffSet;
 
     private SpriteRenderer _background;
     [SerializeField]
@@ -17,14 +16,11 @@ public class CameraFollow : MonoBehaviour {
 
     //Zoek alle hoeken van de map zodat de camera er niet uit kan
     private void Start() {
-        float vertExtent = gameObject.GetComponent<Camera>().orthographicSize;  
-        float horzExtent = vertExtent * Screen.width / Screen.height;
-        
         _background = GameObject.Find("Background").GetComponent<SpriteRenderer>();
-        _leftLimit = -_background.sprite.bounds.size.x / 2.1f;
-        _rightLimit = _background.sprite.bounds.size.x / 2.1f;
-        _bottomLimit = -_background.sprite.bounds.size.y / 2.1f;
-        _topLimit = _background.sprite.bounds.size.y  / 2.1f;    
+        _leftLimit = -_background.sprite.bounds.size.x / 2.32f;
+        _rightLimit = _background.sprite.bounds.size.x / 2.32f;
+        _bottomLimit = -_background.sprite.bounds.size.y / 2.3f;
+        _topLimit = _background.sprite.bounds.size.y  / 2.3f;    
     }
 
     //Volgt de speler tot er een limiet is bereikt.
