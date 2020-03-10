@@ -131,7 +131,7 @@ MonoBehaviour:
   ShootCooldown: 2
   BulletSpeed: 1
   MoveSpeed: 0.5
-  MoveTime: 2.2
+  ScoreValue: 10
   Player: {fileID: 0}
   Bullet: {fileID: -2183156234727175959, guid: b035b0da9751d5a4c9e1d213aae9ddda, type: 3}
   ShootingPoint: {fileID: 5140439747641844441}
@@ -147,9 +147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e8e7a57554dd954c8e7d70e739f8b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreValue: 10
   HealthPoints: 1
   Explosion: {fileID: 970112373365996297, guid: a29d392b108dfac4dafa6b436c09bbeb,
     type: 3}
+  SpawnPowerUp: {fileID: 8224974920023964333, guid: 1b536d44ba97d3e4aa4b94b7e973b183,
+    type: 3}
+  DropChance: 10
 --- !u!114 &5140439749110527311
 MonoBehaviour:
   m_ObjectHideFlags: 0

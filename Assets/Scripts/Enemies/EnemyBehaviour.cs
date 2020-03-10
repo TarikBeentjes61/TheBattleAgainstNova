@@ -9,6 +9,7 @@ namespace Enemies {
         public float BulletSpeed = 1f;
         public float MoveSpeed = 0.5f;
         public float MoveTime = 2.2f;
+        public float ScoreValue = 10;
     
         [Header("GameObjects")]
         public GameObject Player;

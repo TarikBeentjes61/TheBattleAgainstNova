@@ -12,6 +12,7 @@ namespace Enemies {
         public float DistanceToExplode = 0.7f;
         public float DetonationSpeed = 2f;
         public int ExplosionDamage = 1;
+        public float ScoreValue = 10;
     
         [Header("GameObjects")]
         public GameObject Player;
@@ -72,6 +73,7 @@ namespace Enemies {
         //Explode wordt uitgevoerd als de flash klaar is, het zoekt alle objecten om zich heen en haalt 1 leven van hun af.
         //Nadat er levens vanaf zijn gehaald explodeerd hij en laat hij een damagepool achter.
         private void Explode() {
+
             var col = Physics2D.OverlapCircleAll(transform.position, ExplosionRange);
             foreach (var hit in col) {
                 if (hit.CompareTag("Player")) {
