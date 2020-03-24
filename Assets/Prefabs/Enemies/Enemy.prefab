@@ -131,6 +131,7 @@ MonoBehaviour:
   ShootCooldown: 2
   BulletSpeed: 1
   MoveSpeed: 0.5
+  MoveTime: 2.2
   ScoreValue: 10
   Player: {fileID: 0}
   Bullet: {fileID: -2183156234727175959, guid: b035b0da9751d5a4c9e1d213aae9ddda, type: 3}

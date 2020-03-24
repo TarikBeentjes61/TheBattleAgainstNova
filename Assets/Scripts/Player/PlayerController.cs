@@ -3,6 +3,7 @@
 public class PlayerController : MonoBehaviour {
     public float speed;
     public GameObject bulletPrefab;
+    public float shootCooldown = 0.3f;
     public Transform barreltip;
     public Transform player;
     
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     private Vector2 lookDirection;
     private float lookAngle;
     private Vector3 amount;
+    private float shootTimer;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -22,9 +24,12 @@ public class PlayerController : MonoBehaviour {
         lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, lookAngle - 90f);
-
+        shootTimer += Time.deltaTime;
         if (Input.GetKeyDown("space")) {
-            shootBullet();
+            if (shootTimer > shootCooldown) {
+                shootBullet();
+            }
+
         }
     }
 
@@ -36,5 +41,6 @@ public class PlayerController : MonoBehaviour {
         GameObject firedbullet = Instantiate(bulletPrefab, barreltip.position, barreltip.rotation);
         firedbullet.GetComponent<Bullet>().Shooter = "Player";
         firedbullet.GetComponent<Rigidbody2D>().velocity = barreltip.up * 10f;
+        shootTimer = 0f;
     }
 }

@@ -614,7 +614,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnObject: {fileID: 3944612307895322485, guid: f1387740109b6ce48a6be5a541b68aa7,
     type: 3}
-  TimeBetweenSpawns: 20
+  TimeBetweenSpawns: 40
+  SpawnTimeMultiplier: 1
+  SpawnTimeMultiplierOverTime: 0.7
+  TimeTillCap: 60
   MaxSpawns: 0
 --- !u!4 &132363224
 Transform:
@@ -2762,7 +2765,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnObject: {fileID: 5140439749110527283, guid: a430a485487ed4d4ea392b1aaae4a07d,
     type: 3}
-  TimeBetweenSpawns: 2
+  TimeBetweenSpawns: 4
+  SpawnTimeMultiplier: 1
+  SpawnTimeMultiplierOverTime: 0.7
+  TimeTillCap: 60
   MaxSpawns: 0
 --- !u!1 &1111362865
 GameObject:
@@ -3828,6 +3834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6270125538661978917, guid: 91b60fe1c399b6841a25154c7a61fb9f,
+        type: 3}
+      propertyPath: shootCooldown
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b60fe1c399b6841a25154c7a61fb9f, type: 3}
 --- !u!1 &1533534216
@@ -3915,7 +3926,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnObject: {fileID: 4899603457536540676, guid: 784affccbbb9d67459425b72aef734b6,
     type: 3}
-  TimeBetweenSpawns: 6
+  TimeBetweenSpawns: 10
+  SpawnTimeMultiplier: 1
+  SpawnTimeMultiplierOverTime: 0.7
+  TimeTillCap: 60
   MaxSpawns: 0
 --- !u!1 &1647971876
 GameObject:
