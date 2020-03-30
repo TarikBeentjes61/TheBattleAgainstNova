@@ -34,7 +34,8 @@ public class Health : MonoBehaviour {
 
     private void OnDestroy() {
         if (_scoreScript) {
-            _scoreScript.UpdateScore(ScoreValue);            
+            _scoreScript.UpdateScore(ScoreValue);
+            _scoreScript.Kills++;
         }
     }
 

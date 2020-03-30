@@ -8,25 +8,25 @@
     <e p="C:\xampp\htdocs\TheBattleAgainstNova" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Prefabs" t="Include">
-          <e p="Other" t="Include">
-            <e p="GameControlScript.cs" t="Include" />
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="Enemies" t="Include">
             <e p="Bomber.cs" t="Include" />
             <e p="BossEnemyBehaviour.cs" t="Include" />
+            <e p="Enemy2Behaviour.cs" t="Include" />
             <e p="EnemyBehaviour.cs" t="Include" />
           </e>
           <e p="GameManagement" t="Include">
             <e p="addlife.cs" t="Include" />
+            <e p="EndScore.cs" t="Include" />
+            <e p="FadeToBlack.cs" t="Include" />
+            <e p="GameControlScript.cs" t="Include" />
             <e p="Menu.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
             <e p="takeLife.cs" t="Include" />
           </e>
           <e p="Other" t="Include">
             <e p="Bullet.cs" t="Include" />
+            <e p="CurvingBullet.cs" t="Include" />
             <e p="DamagePool.cs" t="Include" />
             <e p="DeleteBullet.cs" t="Include" />
             <e p="DestroyAfterAnimation.cs" t="Include" />

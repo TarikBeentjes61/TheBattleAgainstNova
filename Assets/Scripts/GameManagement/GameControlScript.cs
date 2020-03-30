@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.LWRP;
+using UnityEngine.SceneManagement;
 
 public class GameControlScript : MonoBehaviour
 {
-    public GameObject life1, life2, life3, gameOver;
+    public GameObject life1, life2, life3;
     public int health = 3;
-
-    void Start()
+    private ScoreScript _scoreScript;
+    private GameObject _blackFade;
+    private GameObject _player;
+    private void Start()
     {
+        _player = GameObject.Find("Player");
+        _blackFade = GameObject.Find("FadeToBlack");
         _light2D = GameObject.FindWithTag("Player").GetComponent<Light2D>();
         _originalIntensity = _light2D.intensity;        
-        gameOver.gameObject.SetActive(false);
+        _scoreScript = GameObject.Find("ScoreText").GetComponent<ScoreScript>();
     }
     
     //Veranderd naar methods omdat update 60 keer per seconde wordt uitgevoerd wat niet erg handig is.
@@ -56,37 +61,41 @@ public class GameControlScript : MonoBehaviour
         _coroutineComplete = false;
 
     }
-    
+
+    public GameObject Explosion;
     public void CheckLife() {
-        switch (health)
-        {
+        switch (health) {
             case 3:
                 life1.gameObject.SetActive(true);
                 life2.gameObject.SetActive(true);
                 life3.gameObject.SetActive(true);
-                gameOver.gameObject.SetActive(false);
                 break;
             case 2:
                 life1.gameObject.SetActive(true);
                 life2.gameObject.SetActive(true);
                 life3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(false);
                 break;
 
             case 1:
                 life1.gameObject.SetActive(true);
                 life2.gameObject.SetActive(false);
                 life3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(false);
                 break;
 
             case 0:
                 life1.gameObject.SetActive(false);
                 life2.gameObject.SetActive(false);
                 life3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
-                Time.timeScale = 0;
+                _player.SetActive(false);
+                Instantiate(Explosion, _player.transform.position, Quaternion.identity);
+                StartCoroutine(_blackFade.GetComponent<FadeToBlack>().StartFading());
                 break;
         }
+    }
+
+    public void DeathScreen() {
+        PlayerPrefs.SetInt("Score", Mathf.RoundToInt(_scoreScript.CurrentScore));
+        PlayerPrefs.SetInt("Kills",_scoreScript.Kills);
+        SceneManager.LoadScene("DeathScreen");
     }
 }

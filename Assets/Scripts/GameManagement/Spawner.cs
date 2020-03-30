@@ -54,7 +54,6 @@ public class Spawner : MonoBehaviour {
 
                 TimeBetweenSpawns = Mathf.Lerp(TimeBetweenSpawns, TimeBetweenSpawns * SpawnTimeMultiplierOverTime,
                     Time.deltaTime / TimeTillCap);
-                Debug.Log(TimeBetweenSpawns);
             }
             yield return null;
         }

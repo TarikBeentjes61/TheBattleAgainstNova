@@ -30,6 +30,7 @@ namespace Enemies {
         private bool _flashing;
         private void Update() {
             if (!_flashing) {
+                if (!Player) {return;}
                 MoveTowardsPlayer();
                 LookAt();
                 if (Vector2.Distance(transform.position, Player.transform.position) < DistanceToExplode) {
