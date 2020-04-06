@@ -28,6 +28,7 @@ public class GameControlScript : MonoBehaviour
         health += addedNumber;
         if (health > 3) {
             health = 3;
+            _scoreScript.UpdateScore(10);
         }
         CheckLife();
     }

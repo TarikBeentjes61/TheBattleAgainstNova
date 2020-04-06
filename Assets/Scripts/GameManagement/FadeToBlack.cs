@@ -14,6 +14,7 @@ public class FadeToBlack : MonoBehaviour {
         _imageAlpha = _image.color.a;
     }
 
+    //Simpele functie om een scherm naar zwart te laten faden
     public IEnumerator StartFading() {
         while (_imageAlpha < 1) {
             _imageAlpha = Mathf.MoveTowards(_imageAlpha, 1, Time.deltaTime);

@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void FixedUpdate() {
+        rb.velocity = new Vector2(0f,0f);
+        rb.angularVelocity = 0f;
+        transform.rotation = Quaternion.Euler(new Vector2(0f,0f));
         rb.MovePosition(rb.position + moves * Time.fixedDeltaTime);
     }
 
